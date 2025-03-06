@@ -41,13 +41,17 @@ let Price = ticketPrice * userKm;
         if(userAge<18){
             console.log('Sconto minorenni');
 
-            
+            discount = (Price * discountUnder18) / 100 ;
         } else if(userAge>65){
             console.log('Sconto anziani');
+
+            discount = (Price * discountOver65) / 100 ;
         }
 
-        
+        console.log(discount);
 
+        Price = Price - discount;
+        console.log(`Prezzo finale ${Price.toFixed(2)}€`);
     })
 
 // MILESTONE 3:
