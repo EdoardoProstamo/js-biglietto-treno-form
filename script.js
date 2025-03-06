@@ -25,21 +25,30 @@
         const userAge = parseInt(userAgeElement.value);
         const userKm = parseFloat(userKmElement.value);
 
-        
-
-    })
-
-
-
-
 // MILESTONE 2:
 // Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
 // Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
+const ticketPrice = 0.21;
+const discountUnder18 = 20;
+const discountOver65 = 40;
 
 
+let Price = ticketPrice * userKm;
+        console.log(Price);
 
+        let discount = 0;
+        if(userAge<18){
+            console.log('Sconto minorenni');
 
+            
+        } else if(userAge>65){
+            console.log('Sconto anziani');
+        }
+
+        
+
+    })
 
 // MILESTONE 3:
 // Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
