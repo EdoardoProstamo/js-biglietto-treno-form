@@ -36,8 +36,9 @@ const discountOver65 = 40;
 //info in pagina(ul)
 const ageInfoElement = document.getElementById('age-info');
 const kmInfoElement = document.getElementById('km-info');
-const priceInfoElement = document.getElementById('price-info');
 const discountInfoElement = document.getElementById('discount-info');
+const priceInfoElement = document.getElementById('price-info');
+
 
 //Logica calcolo sconti e prezzo finale
 let Price = ticketPrice * userKm;
@@ -54,13 +55,18 @@ let Price = ticketPrice * userKm;
             discount = (Price * discountOver65) / 100 ;
         }
 
-        console.log(discount);
-
-        //riassumo tutta la formattazione del prezzo in una parola sola
-        const PriceFormatted = `${Price.toFixed(2)}€`;
         //prezzo finale
         Price = Price - discount;
+        console.log(Price);
+        //riassumo tutta la formattazione del prezzo e dello sconto in una parola sola
+        //prezzo
+        const PriceFormatted = `${Price.toFixed(2)}€`;
+        //sconto
+        const discountFormatted = `${discount.toFixed(2)}€`;
+
+        console.log(`Hai risparmiato ${discountFormatted}€`);
         console.log(`Prezzo finale ${PriceFormatted}€`);
+
 
 
 
@@ -70,8 +76,9 @@ let Price = ticketPrice * userKm;
         //info in pagina
         ageInfoElement.innerText = userAge;
         kmInfoElement.innerText = userKm;
-        priceInfoElement.innerText = PriceFormatted;
         discountInfoElement.innerText = discountFormatted;
+        priceInfoElement.innerText = PriceFormatted;
+
 
     })
 
