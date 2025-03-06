@@ -19,6 +19,11 @@
     const userKm = document.getElementById('userKm');
     console.log(userKm);
 
+    Ticket.addEventListener('submit', function(evento){
+        evento.preventDefault();
+
+    })
+
 
 
 
