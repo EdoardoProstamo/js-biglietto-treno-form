@@ -13,14 +13,19 @@
     const Ticket = document.getElementById('Ticket');
     console.log(Ticket);
     //Age
-    const userAge = document.getElementById('userAge');
+    const userAgeElement = document.getElementById('userAge');
     console.log(userAge);
     //Km
-    const userKm = document.getElementById('userKm');
+    const userKmElement = document.getElementById('userKm');
     console.log(userKm);
 
     Ticket.addEventListener('submit', function(evento){
         evento.preventDefault();
+
+        const userAge = parseInt(userAgeElement.value);
+        const userKm = parseFloat(userKmElement.value);
+
+        
 
     })
 
