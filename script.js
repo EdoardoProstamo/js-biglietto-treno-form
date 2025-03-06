@@ -9,6 +9,15 @@
 // MILESTONE 1:
 // Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.
 
+    //Form
+    const Ticket = document.getElementById('Ticket');
+    console.log(Ticket);
+    //Age
+    const userAge = document.getElementById('userAge');
+    console.log(userAge);
+    //Km
+    const userKm = document.getElementById('userKm');
+    console.log(userKm);
 
 
 
