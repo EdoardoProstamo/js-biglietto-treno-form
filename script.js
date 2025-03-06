@@ -33,7 +33,13 @@ const ticketPrice = 0.21;
 const discountUnder18 = 20;
 const discountOver65 = 40;
 
+//info in pagina(ul)
+const ageInfoElement = document.getElementById('age-info');
+const kmInfoElement = document.getElementById('km-info');
+const priceInfoElement = document.getElementById('price-info');
+const discountInfoElement = document.getElementById('discount-info');
 
+//Logica calcolo sconti e prezzo finale
 let Price = ticketPrice * userKm;
         console.log(Price);
 
@@ -50,9 +56,25 @@ let Price = ticketPrice * userKm;
 
         console.log(discount);
 
+        //riassumo tutta la formattazione del prezzo in una parola sola
+        const PriceFormatted = `${Price.toFixed(2)}€`;
+        //prezzo finale
         Price = Price - discount;
-        console.log(`Prezzo finale ${Price.toFixed(2)}€`);
+        console.log(`Prezzo finale ${PriceFormatted}€`);
+
+
+
+
+
+
+        //info in pagina
+        ageInfoElement.innerText = userAge;
+        kmInfoElement.innerText = userKm;
+        priceInfoElement.innerText = PriceFormatted;
+        discountInfoElement.innerText = discountFormatted;
+
     })
+
 
 // MILESTONE 3:
 // Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
